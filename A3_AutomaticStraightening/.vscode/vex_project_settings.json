@@ -1,0 +1,18 @@
+{
+	"extension": {
+		"version": "0.5.0",
+		"json": 2
+	},
+	"project": {
+		"name": "A3_AutomaticStraightening",
+		"description": "",
+		"creationDate": "5/10/2024, 9:42:48 AM",
+		"platform": "V5",
+		"language": "python",
+		"slot": 4,
+		"sdkVersion": "V5_1_0_1_19",
+		"python": {
+			"main": "src/main.py"
+		}
+	}
+}
