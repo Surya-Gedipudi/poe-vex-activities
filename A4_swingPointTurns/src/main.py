@@ -59,7 +59,7 @@ def swingRight(turnCount):                              # turnCount - encoder co
     leftEncoder.set_position(0, DEGREES);               # Reset the left encoder to 0.
 
     while (leftEncoder.position(DEGREES) < turnCount):  # Check turn status based on left encoder count
-        spinMotors(50, 0)                               # Spin left motor forward (right = off)
+        spinMotors(60, 0)                               # Spin left motor forward (right = off)
 
     stopMotors()                                        # Stop the motors
 
@@ -68,7 +68,7 @@ def pointLeft(turnCount):                               # turnCount = encoder co
     rightEncoder.set_position(0, DEGREES)               # Reset the right encoder to 0
 
     while (rightEncoder.position(DEGREES) < turnCount): # Check turn status based on right encoder count
-        spinMotors(50, -50)                             # Spin right motor forward and left reverse
+        spinMotors(60, -60)                             # Spin right motor forward and left reverse
 
     stopMotors()                                        # Stop the motors
 
@@ -84,10 +84,10 @@ def pointRight(turnCount):                              # turnCount = encoder co
 # Activity 4 will have to examine the swingLeft() and pointLeft functions separately.
 def main():
     bump()              # Wait for bump switch to be pressed to start the motors
-    swingLeft(1800)     # 90-degree swing turn (count value specific to robot)
+    #swingLeft(50)     # 90-degree swing turn (count value specific to robot)
                         # Count for 90-deg. left turn may not equal count for 90-deg. right turn
 
-    #pointLeft(320)     # 90-degree point turn (count value specific to robot)
+    pointLeft(690)     # 90-degree point turn (count value specific to robot)
     # Count for 90-deg. left turn may not equal count for 90-deg. right turn
 
 main()
